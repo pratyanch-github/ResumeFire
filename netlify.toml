@@ -1,0 +1,21 @@
+# Redirect all app routes to index.html for React Router (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirect /admin to admin subdomain
+[[redirects]]
+  from = "/admin/*"
+  to = "https://admin.resumefire.store/:splat"
+  status = 301
+  force = true
+
+# Redirect /api to backend API subdomain
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.resumefire.store/:splat"
+  status = 301
+  force = true
+
+# Add more custom redirects below as needed
